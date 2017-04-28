@@ -52,15 +52,12 @@ namespace FinalGroupProjectTeam8.Models
 
         public UserTypeEnum UserType { get; set; }
 
-        public virtual CheckingAccount CheckingAccount { get; set; }
+        public virtual List<CheckingAccount> CheckingAccounts { get; set; }
 
-        public virtual SavingsAccount SavingsAccount { get; set; }
+        public virtual List<SavingsAccount> SavingsAccounts { get; set; }
 
-        public virtual List<IRA> IRAs { get; set; }
-        public virtual List<StockPortfolio> StockPortfolios { get; set; }
-        public virtual List<Deposit> Deposits { get; set; }
-        public virtual List<Transfer> Transfers { get; set; }
-        public virtual List<Payment> Payments { get; set; }
+        public virtual IRA IRA { get; set; }
+        public virtual StockPortfolio StockPortfolio { get; set; }
 
         //This method allows you to create a new user
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<AppUser> manager)
