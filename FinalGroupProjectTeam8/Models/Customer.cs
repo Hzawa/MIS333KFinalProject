@@ -9,7 +9,7 @@ namespace FinalGroupProjectTeam8.Models
     {
         public Customer()
         {
-
+             
             // Setting the type on instantiation so we can be sure type is always properly set
             this.UserType = UserTypeEnum.Customer;
         }
