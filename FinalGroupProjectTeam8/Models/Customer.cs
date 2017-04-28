@@ -5,7 +5,7 @@ using System.Web;
 
 namespace FinalGroupProjectTeam8.Models
 {
-    public class Customer : BankUser
+    public class Customer : AppUser
     {
         public Customer()
         {

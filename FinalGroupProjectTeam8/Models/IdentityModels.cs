@@ -20,21 +20,21 @@ namespace FinalGroupProjectTeam8.Models
         // Bank user scalar and navigational properties
         [Display(Name = "First Name")]
         [Required(ErrorMessage = "First name is required.")]
-        public String FirstName { get; set; }
+        public String FName { get; set; }
 
         [Display(Name = "Middle Initial")]
         [Required(ErrorMessage = "Middle initial is required.")]
         public String MiddleInitial { get; set; }
 
-        [Display(Name = "Password")]
-        [Required(ErrorMessage = "Password is required.")]
-        public String Password { get; set; }
+        [Display(Name = "Last Name")]
+        [Required(ErrorMessage = "Last name is required.")]
+        public String LName { get; set; }
 
         [Display(Name = "Birthday")]
         [Required(ErrorMessage = "Birthday is required.")]
         public DateTime Birthday { get; set; }
 
-        [Display(Name = "Street")]
+        [Display(Name = "Street Address")]
         [Required(ErrorMessage = "Street is required.")]
         public String Street { get; set; }
 

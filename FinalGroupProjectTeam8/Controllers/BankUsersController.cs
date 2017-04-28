@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FinalGroupProjectTeam8.Models;
+using Microsoft.AspNet.Identity;
+
 
 namespace FinalGroupProjectTeam8.Controllers
 {
@@ -17,7 +19,7 @@ namespace FinalGroupProjectTeam8.Controllers
         // GET: BankUsers
         public ActionResult Index()
         {
-            return View(db.BankUsers.ToList());
+            return View(db.Users.ToList());
         }
 
         // GET: BankUsers/Details/5
@@ -27,12 +29,12 @@ namespace FinalGroupProjectTeam8.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BankUser bankUser = db.BankUsers.Find(id);
-            if (bankUser == null)
+            AppUser bankuser = db.Users.Find(id);
+            if (bankuser == null)
             {
                 return HttpNotFound();
             }
-            return View(bankUser);
+            return View(bankuser);
         }
 
         // GET: BankUsers/Create
@@ -46,11 +48,11 @@ namespace FinalGroupProjectTeam8.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "BankUserID,UserType,FirstName,MiddleInitial,EmailAddress,Password,PhoneNumber,Birthday,Street,City,State,Zip")] BankUser bankUser)
+        public ActionResult Create([Bind(Include = "BankUserID,UserType,FirstName,MiddleInitial,EmailAddress,Password,PhoneNumber,Birthday,Street,City,State,Zip")] AppUser bankUser)
         {
             if (ModelState.IsValid)
             {
-                db.BankUsers.Add(bankUser);
+                db.Users.Add(bankUser);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +67,7 @@ namespace FinalGroupProjectTeam8.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BankUser bankUser = db.BankUsers.Find(id);
+            AppUser bankUser = db.Users.Find(id);
             if (bankUser == null)
             {
                 return HttpNotFound();
@@ -78,7 +80,7 @@ namespace FinalGroupProjectTeam8.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "BankUserID,UserType,FirstName,MiddleInitial,EmailAddress,Password,PhoneNumber,Birthday,Street,City,State,Zip")] BankUser bankUser)
+        public ActionResult Edit([Bind(Include = "BankUserID,UserType,FirstName,MiddleInitial,Email,Password,PhoneNumber,Birthday,Street,City,State,Zip")] AppUser bankUser)
         {
             if (ModelState.IsValid)
             {
@@ -96,12 +98,12 @@ namespace FinalGroupProjectTeam8.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BankUser bankUser = db.BankUsers.Find(id);
-            if (bankUser == null)
+            AppUser bankuser = db.Users.Find(id);
+            if (bankuser == null)
             {
                 return HttpNotFound();
             }
-            return View(bankUser);
+            return View(bankuser);
         }
 
         // POST: BankUsers/Delete/5
@@ -109,8 +111,8 @@ namespace FinalGroupProjectTeam8.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            BankUser bankUser = db.BankUsers.Find(id);
-            db.BankUsers.Remove(bankUser);
+            AppUser bankuser = db.Users.Find(id);
+            db.Users.Remove(bankuser);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
