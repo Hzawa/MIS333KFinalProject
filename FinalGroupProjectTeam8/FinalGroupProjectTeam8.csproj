@@ -242,7 +242,6 @@
     <Compile Include="Models\SavingsAccount.cs" />
     <Compile Include="Models\StockPortfolio.cs" />
     <Compile Include="Models\Transaction.cs" />
-    <Compile Include="Models\BankUser.cs" />
     <Compile Include="Models\Dispute.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IdentityRoles.cs" />
