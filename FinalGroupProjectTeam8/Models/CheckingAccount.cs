@@ -7,6 +7,13 @@ namespace FinalGroupProjectTeam8.Models
 {
     public class CheckingAccount : CashAccount
     {
+        public Int32 CheckingAccountID { get; set; }
+
+        [Key]
+        public String UserID { get; set; }
+
+        [ForeignKey("UserID")]
+        public virtual AppUser User { get; set; }
 
         public CheckingAccount() {
 

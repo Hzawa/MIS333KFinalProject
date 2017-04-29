@@ -7,6 +7,9 @@ namespace FinalGroupProjectTeam8.Models
 {
     public class IRA : Account
     {
+        public Int32 IRAID { get; set; }
+
+        public virtual AppUser User { get; set; }
         public IRA()
         {
 

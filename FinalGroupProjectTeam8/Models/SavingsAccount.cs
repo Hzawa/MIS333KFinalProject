@@ -7,6 +7,9 @@ namespace FinalGroupProjectTeam8.Models
 {
     public class SavingsAccount : CashAccount
     {
+        public Int32 SavingsAccountID { get; set; }
+
+        public virtual AppUser User { get; set; }
         public SavingsAccount()
         {
 

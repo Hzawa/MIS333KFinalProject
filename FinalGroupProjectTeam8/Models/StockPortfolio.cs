@@ -7,6 +7,9 @@ namespace FinalGroupProjectTeam8.Models
 {
     public class StockPortfolio : Account
     {
+        public Int32 StockPortfolioID { get; set; }
+
+        public virtual AppUser User { get; set; }
         public StockPortfolio()
         {
 

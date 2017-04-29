@@ -52,12 +52,14 @@ namespace FinalGroupProjectTeam8.Models
 
         public UserTypeEnum UserType { get; set; }
 
-        public virtual List<CheckingAccount> CheckingAccounts { get; set; }
+        public virtual List<CheckingAccount> CheckingAcounts { get; set; }
 
         public virtual List<SavingsAccount> SavingsAccounts { get; set; }
 
         public virtual IRA IRA { get; set; }
+
         public virtual StockPortfolio StockPortfolio { get; set; }
+
 
         //This method allows you to create a new user
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<AppUser> manager)
@@ -85,6 +87,23 @@ namespace FinalGroupProjectTeam8.Models
         public static AppDbContext Create()
         {
             return new AppDbContext();
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<IdentityUserLogin>().HasKey<string>(l => l.UserId);
+            modelBuilder.Entity<IdentityRole>().HasKey<string>(r => r.Id);
+            modelBuilder.Entity<IdentityUserRole>().HasKey(r => new { r.RoleId, r.UserId });
+
+            //it will automatically create something like base(**) if you let intelisense auto-create, keep that in there.
+            modelBuilder.Entity<AppUser>()
+                    .HasOptional(f => f.IRA)
+                    .WithRequired(s => s.User);
+
+            //it will automatically create something like base(**) if you let intelisense auto-create, keep that in there.
+            modelBuilder.Entity<AppUser>()
+                    .HasOptional(f => f.StockPortfolio)
+                    .WithRequired(s => s.User);
         }
 
         public DbSet<AppRole> AppRoles { get; set; }
