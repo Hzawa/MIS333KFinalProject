@@ -210,7 +210,6 @@ C:\Users\Patrick Monaghan\Documents\GitHub\FinalGroupProjectTeam8\FinalGroupProj
 \\austin.utexas.edu\lib-public\PublicRedirected$\kks736\Desktop\GitHub\MIS333KFinalProject\FinalGroupProjectTeam8\bin\Microsoft.Owin.Security.Cookies.xml
 \\austin.utexas.edu\lib-public\PublicRedirected$\kks736\Desktop\GitHub\MIS333KFinalProject\FinalGroupProjectTeam8\bin\Microsoft.Owin.Security.OAuth.xml
 \\austin.utexas.edu\lib-public\PublicRedirected$\kks736\Desktop\GitHub\MIS333KFinalProject\FinalGroupProjectTeam8\bin\Newtonsoft.Json.xml
-\\austin.utexas.edu\lib-public\PublicRedirected$\kks736\Desktop\GitHub\MIS333KFinalProject\FinalGroupProjectTeam8\obj\Debug\FinalGroupProjectTeam8.csprojResolveAssemblyReference.cache
 \\austin.utexas.edu\lib-public\PublicRedirected$\kks736\Desktop\GitHub\MIS333KFinalProject\FinalGroupProjectTeam8\obj\Debug\FinalGroupProjectTeam8.Migrations.initialSetup.resources
 \\austin.utexas.edu\lib-public\PublicRedirected$\kks736\Desktop\GitHub\MIS333KFinalProject\FinalGroupProjectTeam8\obj\Debug\FinalGroupProjectTeam8.Migrations.test1.resources
 \\austin.utexas.edu\lib-public\PublicRedirected$\kks736\Desktop\GitHub\MIS333KFinalProject\FinalGroupProjectTeam8\obj\Debug\FinalGroupProjectTeam8.Migrations.ModelMig1.resources
